@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/normalize2.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;700&family=Roboto:wght@100;400;900&display=swap" rel="stylesheet">
+    <title>Cristian Acalo</title>
+</head>
+<body>
+    <div class="content">
+        <header>
+            <a href="#" class="header_logoCris">
+                <div class="logoCris_borde">
+                    <div class="logoCris_letra">C</div>
+                </div>
+            </a>
+            <button class="header_menu--button" id="menu_active--button" onclick="active_menu()">
+                <div class="menu_button--icon">
+                </div>
+            </button>
+            <button class="blur_menu" id="blur_menu" onclick="hide_menu()"></button>
+            <nav class="responsive_menu" id="responsive_menu">
+                <button class="hide_menu--button" id="hide_menu--button" onclick="hide_menu()"></button>
+                <ul class="nav_list">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Experience</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html> 

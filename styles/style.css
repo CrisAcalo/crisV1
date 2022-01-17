@@ -1,0 +1,144 @@
+:root{
+    --color-light-blue: #64FFDA;
+    --color-dark-blue: #1E4F6F;
+    --font-mono: Roboto;
+}
+
+body {
+    background-color: var(--color-dark-blue);
+    font-family: var(--font-mono);
+}
+
+header {
+    height: 80px;
+    width: 100vw;
+    opacity: 3;
+    position: fixed;
+}
+
+
+.header_logoCris,
+.logoCris_borde,
+.logoCris_letra{
+    z-index: 5;
+}
+.logoCris_borde {
+    background-color: #00000000;
+    border: 2px solid var(--color-light-blue);
+    padding: 5px;
+    width: 40px;
+    height:40px;
+    border-radius: 10px;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.logoCris_letra {
+    color: var(--color-light-blue);
+    font-size: 2rem;
+    font-weight: 400;
+    transform: rotate(-45deg);
+    position: relative;
+    top: -8px;
+    left: 2px;
+}
+
+.header_menu--button {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    right: 20px;
+    top: 20px;
+    background: transparent;
+}
+
+.menu_button--icon::before {
+    position: relative;
+    content: "";
+    display: block;
+    top: -10px;
+    left: -6px;
+    background: var(--color-light-blue);
+    width: 36px;
+    height: 2px;
+}
+
+.menu_button--icon {
+    position: relative;
+    top: 0px;
+    background: var(--color-light-blue);
+    width: 30px;
+    height: 2px;
+}
+
+.menu_button--icon::after {
+    position: relative;
+    content: "";
+    display: block;
+    top: 8px;
+    left: 6px;
+    background: var(--color-light-blue);
+    width: 24px;
+    height: 2px;
+}
+
+.blur_menu {
+    background: rgba(0, 0, 0, 0.445);
+    backdrop-filter: blur(4px);
+    height: 100vh;
+    width: 100vw;
+    z-index: 4;
+    position: absolute;
+}
+
+.hide_menu--button::before {
+    position: absolute;
+    content: "";
+    right: 0;
+    background: var(--color-light-blue);
+    width: 30px;
+    height: 2px;
+    transform: rotate(45deg);
+}
+
+.hide_menu--button {
+    position: absolute;
+    background: #00000000;
+    top: 25px;
+    right: 25px;
+    width: 30px;
+    height: 30px;
+}
+
+.hide_menu--button::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    background: var(--color-light-blue);
+    width: 30px;
+    height: 2px;
+    transform: rotate(135deg);
+}
+
+.responsive_menu {
+    background: var(--color-dark-blue);
+    width: 220px;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    z-index: 5;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav_list {
+    padding-bottom: 30px;
+}
+
+.nav_list li {
+    margin-top: 30px;
+}
