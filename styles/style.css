@@ -1,7 +1,7 @@
 :root{
     --color-light-blue: #64FFDA;
     --color-dark-blue: #1E4F6F;
-    --font-mono: Roboto;
+    --font-mono: 'IBM Plex Mono', monospace;
 }
 
 body {
@@ -40,7 +40,7 @@ header {
     font-weight: 400;
     transform: rotate(-45deg);
     position: relative;
-    top: -8px;
+    top: -10px;
     left: 2px;
 }
 
@@ -84,12 +84,13 @@ header {
 }
 
 .blur_menu {
-    background: rgba(0, 0, 0, 0.445);
+    background: rgba(0, 0, 0, 0);
     backdrop-filter: blur(4px);
     height: 100vh;
     width: 100vw;
     z-index: 4;
     position: absolute;
+    transition: display 100ms;
 }
 
 .hide_menu--button::before {
@@ -123,6 +124,7 @@ header {
 
 .responsive_menu {
     background: var(--color-dark-blue);
+    box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.424);
     width: 220px;
     height: 100vh;
     position: absolute;
@@ -133,6 +135,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: right 400ms cubic-bezier(.83,.34,.58,.77);
 }
 
 .nav_list {
@@ -141,4 +144,5 @@ header {
 
 .nav_list li {
     margin-top: 30px;
+    font-size: 2rem;
 }
