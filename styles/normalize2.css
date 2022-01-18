@@ -31,6 +31,9 @@ ol[role='list'] {
 /* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
+}
+
+html {
   font-size: 62.5%;
 }
 

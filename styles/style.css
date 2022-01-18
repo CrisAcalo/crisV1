@@ -36,7 +36,7 @@ header {
 }
 .logoCris_letra {
     color: var(--color-light-blue);
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 400;
     transform: rotate(-45deg);
     position: relative;
