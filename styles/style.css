@@ -16,10 +16,16 @@ body {
 header {
     height: 80px;
     width: 100vw;
-    opacity: 3;
     position: fixed;
 }
 
+.icons_container {
+    background: #1e4f6f69;
+    height: 80px;
+    width: 100vw;
+    position: absolute;
+    backdrop-filter: blur(4px);
+}
 
 .header_logoCris,
 .logoCris_borde,
@@ -91,11 +97,12 @@ header {
     background: rgba(0, 0, 0, 0);
     backdrop-filter: blur(4px);
     height: 100vh;
-    width: 100vw;
+    width: calc(100vw - 220px);
     z-index: 4;
     position: absolute;
-    display: none;
-    transition: display 100ms;
+    left: 100vw;
+    display: block;
+    transition: left 200ms linear;
 }
 
 .responsive_menu {
@@ -111,7 +118,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: right 200ms cubic-bezier(.83,.34,.58,.77);
+    transition: right 200ms linear;
 }
 
 .hide_menu--button::before {
