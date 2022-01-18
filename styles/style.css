@@ -1,7 +1,11 @@
 :root{
     --color-light-blue: #64FFDA;
     --color-dark-blue: #1E4F6F;
+    --color-light-gray: #E7EEF5;
+    --color-dark-gray: #98A6B4;
+    --color-strange-grey: #D0DEEB;
     --font-mono: 'IBM Plex Mono', monospace;
+    --font-rubik: 'Titillium Web', sans-serif;
 }
 
 body {
@@ -90,7 +94,24 @@ header {
     width: 100vw;
     z-index: 4;
     position: absolute;
+    display: none;
     transition: display 100ms;
+}
+
+.responsive_menu {
+    background: var(--color-dark-blue);
+    box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.424);
+    width: 220px;
+    height: 100vh;
+    position: absolute;
+    right: -220px;
+    z-index: 5;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right 200ms cubic-bezier(.83,.34,.58,.77);
 }
 
 .hide_menu--button::before {
@@ -122,22 +143,6 @@ header {
     transform: rotate(135deg);
 }
 
-.responsive_menu {
-    background: var(--color-dark-blue);
-    box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.424);
-    width: 220px;
-    height: 100vh;
-    position: absolute;
-    right: 0;
-    z-index: 5;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: right 400ms cubic-bezier(.83,.34,.58,.77);
-}
-
 .nav_list {
     padding-bottom: 30px;
 }
@@ -145,4 +150,48 @@ header {
 .nav_list li {
     margin-top: 30px;
     font-size: 2rem;
+}
+
+.introduction_container {
+    margin: auto;
+    height: 100vh;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: var(--font-rubik);
+}
+
+.introduction_greeting {
+    color: var(--color-light-blue);
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+.introduction_container h1 {
+    color: var(--color-light-gray);
+    font-size: 6.4rem;
+    font-weight: 700;
+    line-height: 100%;
+    margin-top: 10px;
+}
+
+.introduction_phrase {
+    color: var(--color-dark-gray);
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 35px;
+    margin: 10px 0 20px 0;
+}
+
+.introduction_text {
+    color: var(--color-strange-grey);
+    font-size: 15px;
+    font-weight: 200;
+    line-height: 130%;
+}
+
+.introduction_text span {
+    color: var(--color-light-blue);
+    font-weight: 400;
 }
