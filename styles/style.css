@@ -39,7 +39,7 @@ header {
     padding: 5px;
     width: 40px;
     height:40px;
-    border-radius: 10px;
+    border-radius: 7px;
     transform: rotate(45deg);
     position: absolute;
     top: 20px;
@@ -153,11 +153,43 @@ header {
 
 .nav_list {
     padding-bottom: 30px;
+    text-align: center;
+    color: var(--color-light-gray);
+}
+
+.nav_list li a::before {
+    display: block;
+    color: var(--color-light-blue);
+}
+
+.nav_list li:nth-child(1) a::before {
+    content: "01.";
+}
+
+.nav_list li:nth-child(2) a::before {
+    content: "02.";
+}
+
+.nav_list li:nth-child(3) a::before {
+    content: "03.";
+}
+
+.nav_list li:nth-child(4) a::before {
+    content: "04.";
 }
 
 .nav_list li {
     margin-top: 30px;
     font-size: 2rem;
+}
+
+.responsive_menu--resume-button {
+    background: var(--color-dark-blue);
+    border: 2px solid var(--color-light-blue);
+    color: var(--color-light-gray);
+    border-radius: 5px;
+    font-size: 2.5rem;
+    padding: 5px 10px;
 }
 
 .introduction_container {
@@ -252,6 +284,25 @@ header {
     font-weight: 400;
 }
 
+.about_list {
+    color: var(--color-strange-grey);
+    font-size: 1.3rem;
+    font-weight: 200;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.about_list li::before {
+    content: "▹";
+    display: inline-block;
+    margin: 0 3px 0 0;
+    color: var(--color-light-blue);
+}
+
 .about_container--image {
     position: relative;
     z-index: 1;
@@ -265,8 +316,8 @@ header {
     width: 189px;
     border-radius: 3px;
     position: absolute;
-    top: 20px;
-    right: -20px;
+    top: 15px;
+    right: -15px;
     z-index: -5;
 }
 
