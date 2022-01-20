@@ -104,6 +104,7 @@ header {
     left: 100vw;
     display: block;
     transition: left 200ms linear;
+    opacity: 0;
 }
 
 .responsive_menu {
@@ -218,7 +219,7 @@ header {
 
 .introduction_phrase {
     color: var(--color-dark-gray);
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: 600;
     line-height: 35px;
     margin: 10px 0 20px 0;
@@ -226,7 +227,7 @@ header {
 
 .introduction_text {
     color: var(--color-strange-grey);
-    font-size: 15px;
+    font-size: 1.8rem;
     font-weight: 200;
     line-height: 130%;
 }
@@ -236,8 +237,8 @@ header {
     font-weight: 400;
 }
 
-.about_container {
-    background: var(--color-dark-blue);
+.about_container,
+.experience_container {
     width: 80%;
     margin: auto;
     display: flex;
@@ -246,37 +247,53 @@ header {
     align-items: center;
 }
 
-.about_container h2::before {
-    color: var(--color-light-blue);
-    display: inline-block;
-    content: "01.";
-    margin-right: 3px;
-}
-
-.about_container h2 {
+/* Estilos generales para h2 del contenido main*/
+.main_subtitles {
     color: var(--color-light-gray);
     font-size: 2rem;
     font-weight: 600;
     display: inline-block;
     margin-bottom: 20px;
+    align-self: flex-start;
 }
 
-.about_container h2::after {
+.main_subtitles::before {
+    color: var(--color-light-blue);
+    display: inline-block;
+    margin-right: 3px;
+}
+
+.about_container h2::before {
+    content: "01.";
+}
+
+.main_subtitles::after {
+    margin: 7px 0 7px 7px;
+    display: inline-block;
     background: var(--color-dark-gray);
     opacity: 0.5;
     content: "";
-    height: 1px;
-    width: 110px;
-    margin: 7px 0 7px 7px;
-    display: inline-block;
+    height: 1px; 
 }
 
-.about_container p {
+.about_container h2::after {
+    /* background: var(--color-dark-gray);
+    opacity: 0.5;
+    content: "";
+    height: 1px; */
+    width: 110px;
+    /* margin: 7px 0 7px 7px;
+    display: inline-block; */
+}
+
+.about_container p,
+.experience_container p {
     color: var(--color-strange-grey);
     font-family: var(--font-rubik);
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 200;
     margin-bottom: 10px;
+    align-self: flex-start;
 }
 
 .about_container p span {
@@ -284,9 +301,9 @@ header {
     font-weight: 400;
 }
 
-.about_list {
+/* .about_list {
     color: var(--color-strange-grey);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 200;
     display: flex;
     flex-direction: column;
@@ -301,7 +318,7 @@ header {
     display: inline-block;
     margin: 0 3px 0 0;
     color: var(--color-light-blue);
-}
+} */
 
 .about_container--image {
     position: relative;
@@ -341,4 +358,29 @@ header {
     width: 189px;
     border-radius: 3px;
     z-index: 1;
+}
+
+.experience_container {
+    margin-top: 50px;
+}
+
+.experience_container h2::before {
+    content: "02.";
+}
+
+.experience_container h2::after {
+    width: 90px;
+}
+
+.experience_technologies {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    max-width: 210px;
+}
+
+.experience_technologies img {
+    width: 50px;
+    margin: 10px;
 }
